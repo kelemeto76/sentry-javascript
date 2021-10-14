@@ -254,7 +254,7 @@ function checkWebpackPluginOverrides(
  * @returns `true` if sentry code should be injected, and `false` otherwise
  */
 function shouldAddSentryToEntryPoint(entryPointName: string): boolean {
-  return entryPointName === 'pages/_app' || entryPointName.includes('pages/api');
+  return entryPointName === 'pages/_app' || entryPointName === 'pages/_error' || entryPointName.includes('pages/api');
 }
 
 /**
