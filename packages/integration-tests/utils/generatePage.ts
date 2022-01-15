@@ -40,6 +40,8 @@ export async function generatePage(
 
   const alias = await generateSentryAlias();
 
+  alias['@utils'] = `${__dirname}`;
+
   if (!existsSync(localPath)) {
     mkdirSync(localPath, { recursive: true });
   }
